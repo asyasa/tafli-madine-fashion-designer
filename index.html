@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e1e24" />
+    <meta name="description" content="Tafli Madine — Fashion Designer. A cinematic editorial portfolio: couture, textile exploration, and creative direction." />
+    <title>Tafli Madine — Fashion Designer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" data-preloader>
+      <div class="preloader__inner">
+        <span class="preloader__label" data-preloader-label>Assembling the collection</span>
+        <span class="preloader__counter" data-preloader-counter>0</span>
+        <div class="preloader__bar"><span data-preloader-bar></span></div>
+      </div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" data-cursor>
+      <div class="cursor__dot" data-cursor-dot></div>
+      <div class="cursor__ring" data-cursor-ring>
+        <span class="cursor__label" data-cursor-label></span>
+      </div>
+    </div>
+
+    <!-- Progress rail -->
+    <div class="progress-rail" data-progress><span data-progress-fill></span></div>
+
+    <!-- Navigation -->
+    <header class="nav" data-nav>
+      <a href="#hero" class="nav__brand" data-magnetic>
+        <span class="nav__brand-mark">TM</span>
+        <span class="nav__brand-meta">
+          <span>Tafli Madine</span>
+          <em>Fashion Designer — EST. 2021</em>
+        </span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about" data-cursor-hover="About">About</a>
+        <a href="#foret" data-cursor-hover="Signature">Foret Mystere</a>
+        <a href="#collections" data-cursor-hover="Browse">Collections</a>
+        <a href="#textile" data-cursor-hover="Detail">Textile</a>
+        <a href="#contact" data-cursor-hover="Reach Out">Contact</a>
+      </nav>
+      <button class="nav__toggle" data-nav-toggle aria-label="Toggle menu">
+        <i class="ri-menu-3-line" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <!-- Mobile drawer -->
+    <aside class="drawer" data-drawer aria-hidden="true">
+      <button class="drawer__close" data-drawer-close aria-label="Close menu">
+        <i class="ri-close-line" aria-hidden="true"></i>
+      </button>
+      <nav class="drawer__nav">
+        <a href="#about">01 / About</a>
+        <a href="#experience">02 / Experience</a>
+        <a href="#foret">03 / Foret Mystere</a>
+        <a href="#projects">04 / Projects</a>
+        <a href="#styling">05 / Styling</a>
+        <a href="#collections">06 / Collections</a>
+        <a href="#textile">07 / Textile</a>
+        <a href="#illustration">08 / Illustration</a>
+        <a href="#contact">09 / Contact</a>
+      </nav>
+    </aside>
+
+    <main data-scroll-root>
+      <!-- ============ 01 HERO ============ -->
+      <section class="hero" id="hero" data-section="hero">
+        <div class="hero__media" data-hero-media>
+          <video
+            class="hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="/assets/portfolio/look-01.webp"
+            data-hero-video
+          >
+            <source src="/assets/video/reel-1.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__veil" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero__grid">
+          <span class="hero__eyebrow" data-reveal="up">
+            <i class="ri-scissors-cut-line"></i>&nbsp;Portfolio / 2025 Edition
+          </span>
+
+          <h1 class="hero__title" data-hero-title>
+            <span class="hero__title-line">Tafli</span>
+            <span class="hero__title-line hero__title-line--accent">Madine</span>
+          </h1>
+
+          <p class="hero__role" data-reveal="up">Fashion Designer — Creative Director</p>
+
+          <p class="hero__sub" data-split-lines>
+            Translating concepts into couture. Material study, silhouette architecture and
+            editorial direction stitched into a singular visual language.
+          </p>
+
+          <div class="hero__meta">
+            <div class="hero__meta-col" data-reveal="up">
+              <span>Based</span>
+              <em>Jakarta · Indonesia</em>
+            </div>
+            <div class="hero__meta-col" data-reveal="up">
+              <span>Practice</span>
+              <em>Couture · Textile · Styling</em>
+            </div>
+            <div class="hero__meta-col" data-reveal="up">
+              <span>Selected</span>
+              <em>JFW · Editorial · Ready-to-Wear</em>
+            </div>
+          </div>
+
+          <a href="#about" class="hero__cta" data-magnetic data-cursor-hover="Enter">
+            <span>Enter the atelier</span>
+            <i class="ri-arrow-down-line" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="hero__ticker" aria-hidden="true" data-ticker>
+          <div class="hero__ticker-track">
+            <span>Couture</span><span>·</span><span>Textile</span><span>·</span>
+            <span>Editorial</span><span>·</span><span>Silhouette</span><span>·</span>
+            <span>Atelier</span><span>·</span><span>Craft</span><span>·</span>
+            <span>Couture</span><span>·</span><span>Textile</span><span>·</span>
+            <span>Editorial</span><span>·</span><span>Silhouette</span><span>·</span>
+            <span>Atelier</span><span>·</span><span>Craft</span><span>·</span>
+          </div>
+        </div>
+
+        <span class="hero__scroll" aria-hidden="true" data-reveal="up">
+          <span></span>Scroll — Discover
+        </span>
+      </section>
+
+      <!-- ============ 02 ABOUT ============ -->
+      <section class="about" id="about" data-section="about" data-theme="dark">
+        <div class="about__chapter">
+          <span class="chapter__index">/ 02</span>
+          <span class="chapter__label">Profile</span>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__copy">
+            <h2 class="about__heading" data-split-chars>
+              A designer who builds stories in cloth.
+            </h2>
+            <p class="about__lede" data-split-lines>
+              Tafli Madine is a Jakarta-based creative designer, stylist and textile researcher.
+              Her practice oscillates between couture development, material exploration and
+              silhouette design — translating concept into a garment that has its own gravity.
+            </p>
+
+            <div class="about__pillars">
+              <div class="pillar">
+                <i class="ri-shapes-line pillar__icon" aria-hidden="true"></i>
+                <h3>Couture Development</h3>
+                <p>Pattern, draping and construction — garments engineered from the inside out.</p>
+              </div>
+              <div class="pillar">
+                <i class="ri-palette-line pillar__icon" aria-hidden="true"></i>
+                <h3>Material Exploration</h3>
+                <p>Hand-manipulated textiles: macramé, embroidery and surface experiments.</p>
+              </div>
+              <div class="pillar">
+                <i class="ri-contrast-drop-2-line pillar__icon" aria-hidden="true"></i>
+                <h3>Silhouette Design</h3>
+                <p>Sculpting the body's relationship to fabric — tension, volume, restraint.</p>
+              </div>
+            </div>
+
+            <a href="#foret" class="link-arrow" data-magnetic data-cursor-hover="View">
+              See signature work <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="about__stack" data-parallax-stack>
+            <figure class="about__stack-item" data-depth="0.15">
+              <img src="/assets/portfolio/look-02.webp" alt="Couture silhouette in motion" loading="lazy" />
+            </figure>
+            <figure class="about__stack-item about__stack-item--wide" data-depth="0.3">
+              <img src="/assets/portfolio/look-05.webp" alt="Fabric manipulation study" loading="lazy" />
+            </figure>
+            <figure class="about__stack-item about__stack-item--small" data-depth="-0.2">
+              <img src="/assets/portfolio/look-07.webp" alt="Detail of hand-finished seam" loading="lazy" />
+            </figure>
+            <figure class="about__stack-item about__stack-item--tall" data-depth="0.08">
+              <img src="/assets/portfolio/look-09.webp" alt="Editorial styling composition" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 03 EXPERIENCE ============ -->
+      <section class="experience" id="experience" data-section="experience" data-theme="dark">
+        <div class="experience__intro">
+          <div class="about__chapter">
+            <span class="chapter__index">/ 03</span>
+            <span class="chapter__label">Experience</span>
+          </div>
+          <h2 class="experience__heading" data-split-chars>
+            A decade of needles, narratives and nights in the studio.
+          </h2>
+          <p class="experience__caption" data-split-lines>
+            Scroll horizontally through the milestones — from independent design to runway and
+            styling for fashion editorials.
+          </p>
+          <div class="experience__hint" aria-hidden="true">
+            <i class="ri-arrow-right-line"></i> Drag or scroll
+          </div>
+        </div>
+
+        <div class="experience__track" data-exp-pin>
+          <div class="experience__line" aria-hidden="true"></div>
+          <ul class="experience__list" data-exp-list>
+            <li class="exp-card" data-exp-card>
+              <span class="exp-card__year">2021 — Present</span>
+              <h3>Independent Designer</h3>
+              <p>
+                Founded an atelier focused on couture and textile research. Concept-led
+                collections delivered to private clients and editorial shoots.
+              </p>
+              <i class="ri-scissors-2-line exp-card__mark"></i>
+            </li>
+            <li class="exp-card" data-exp-card>
+              <span class="exp-card__year">2023</span>
+              <h3>Jakarta Fashion Week</h3>
+              <p>
+                Presented <em>Foret Mystere</em> — a textile-experimental capsule grounded in
+                biophilic couture. Featured in press and trade outlets.
+              </p>
+              <i class="ri-fire-line exp-card__mark"></i>
+            </li>
+            <li class="exp-card" data-exp-card>
+              <span class="exp-card__year">2022 — 2024</span>
+              <h3>Styling &amp; Creative Direction</h3>
+              <p>
+                Styling and art direction for photoshoots, fashion shows and model management.
+                Collaborations across editorial and commercial work.
+              </p>
+              <i class="ri-camera-lens-line exp-card__mark"></i>
+            </li>
+            <li class="exp-card" data-exp-card>
+              <span class="exp-card__year">2022</span>
+              <h3>Textile &amp; Material Research</h3>
+              <p>
+                Macramé, embroidery and surface-design studies — informed by biophilic and
+                ancestral narratives translated into modern couture.
+              </p>
+              <i class="ri-leaf-line exp-card__mark"></i>
+            </li>
+            <li class="exp-card" data-exp-card>
+              <span class="exp-card__year">2021</span>
+              <h3>Design Collections</h3>
+              <p>
+                Launched four thematic collections — Trauma, Megamendung Ancestral, Roses of
+                Regality and Alluring Shanghai — each a self-contained narrative.
+              </p>
+              <i class="ri-sparkling-2-line exp-card__mark"></i>
+            </li>
+            <li class="exp-card" data-exp-card>
+              <span class="exp-card__year">Ongoing</span>
+              <h3>Editorial &amp; Model Management</h3>
+              <p>
+                Ongoing creative partnership with photographers, stylists and publications —
+                translating couture into story-driven imagery.
+              </p>
+              <i class="ri-gallery-line exp-card__mark"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 04 FORET MYSTERE ============ -->
+      <section class="foret" id="foret" data-section="foret" data-theme="shadow">
+        <div class="about__chapter">
+          <span class="chapter__index">/ 04</span>
+          <span class="chapter__label">Signature Project</span>
+        </div>
+
+        <div class="foret__intro">
+          <h2 class="foret__title" data-foret-title>
+            <span class="foret__title-line">Foret</span>
+            <span class="foret__title-line foret__title-line--accent">Mystere</span>
+          </h2>
+          <p class="foret__subtitle" data-split-lines>
+            A textile-experimental couture capsule, presented on the Jakarta Fashion Week runway.
+            Where woodland mythology meets fabric alchemy.
+          </p>
+          <ul class="foret__facts">
+            <li><em>Year</em><span>2023</span></li>
+            <li><em>Stage</em><span>Jakarta Fashion Week</span></li>
+            <li><em>Focus</em><span>Textile Experimentation</span></li>
+            <li><em>Discipline</em><span>Couture Craftsmanship</span></li>
+          </ul>
+        </div>
+
+        <div class="foret__stage" data-foret-stage>
+          <figure class="foret__mask" data-foret-mask>
+            <img src="/assets/portfolio/look-10.webp" alt="Foret Mystere — hero look" loading="lazy" />
+          </figure>
+          <div class="foret__caption">
+            <span>Look 01 — the Mother Tree</span>
+            <em>Hand-embroidered silk, raw linen</em>
+          </div>
+        </div>
+
+        <div class="foret__blocks">
+          <article class="foret__block">
+            <span class="foret__block-no">01</span>
+            <h3>Concept</h3>
+            <p>
+              A forest whispers before it speaks. The collection translates overheard folklore
+              into silhouettes — structured, organic, almost sentient.
+            </p>
+          </article>
+          <figure class="foret__block-img foret__block-img--lg" data-parallax-img>
+            <img src="/assets/portfolio/look-11.webp" alt="Foret Mystere detail" loading="lazy" />
+          </figure>
+          <article class="foret__block">
+            <span class="foret__block-no">02</span>
+            <h3>Material</h3>
+            <p>
+              Hand-dyed silks, aged linens and experimental surface-work that behaves like bark,
+              moss and root under studio lighting.
+            </p>
+          </article>
+          <figure class="foret__block-img" data-parallax-img>
+            <img src="/assets/portfolio/look-12.webp" alt="Foret Mystere runway" loading="lazy" />
+          </figure>
+          <article class="foret__block">
+            <span class="foret__block-no">03</span>
+            <h3>Runway</h3>
+            <p>
+              Staged at Jakarta Fashion Week — the garments walked a forest of projection and
+              smoke, scored by ambient percussion.
+            </p>
+          </article>
+          <figure class="foret__block-img foret__block-img--tall" data-parallax-img>
+            <img src="/assets/portfolio/look-13.webp" alt="Foret Mystere editorial" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 05 INDEPENDENT PROJECTS ============ -->
+      <section class="projects" id="projects" data-section="projects" data-theme="light">
+        <div class="projects__head">
+          <div class="about__chapter about__chapter--dark">
+            <span class="chapter__index">/ 05</span>
+            <span class="chapter__label">Independent Projects</span>
+          </div>
+          <h2 class="projects__title" data-split-chars>
+            Couture, evening wear and fabric manipulation — drawn from the private atelier.
+          </h2>
+          <div class="projects__filter" data-projects-filter>
+            <button class="is-active" data-filter="all">All</button>
+            <button data-filter="couture">Couture</button>
+            <button data-filter="evening">Evening</button>
+            <button data-filter="fabric">Fabric Study</button>
+          </div>
+        </div>
+
+        <div class="projects__grid" data-projects-grid>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="couture" style="--row:2">
+            <img src="/assets/portfolio/look-14.webp" alt="Couture silhouette" loading="lazy" />
+            <figcaption><em>Couture · 01</em><span>The Quiet Architect</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="evening" style="--row:3">
+            <img src="/assets/portfolio/look-15.webp" alt="Evening gown" loading="lazy" />
+            <figcaption><em>Evening · 02</em><span>Cold Star, Warm Night</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="fabric" style="--row:2">
+            <img src="/assets/portfolio/look-16.webp" alt="Fabric manipulation" loading="lazy" />
+            <figcaption><em>Fabric · 03</em><span>Handwoven Signal</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="couture" style="--row:3">
+            <img src="/assets/portfolio/look-17.webp" alt="Couture detail" loading="lazy" />
+            <figcaption><em>Couture · 04</em><span>Petal Scaffold</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="evening" style="--row:2">
+            <img src="/assets/portfolio/look-18.webp" alt="Evening wear" loading="lazy" />
+            <figcaption><em>Evening · 05</em><span>Rouge Passage</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="fabric" style="--row:3">
+            <img src="/assets/portfolio/look-19.webp" alt="Fabric macro" loading="lazy" />
+            <figcaption><em>Fabric · 06</em><span>Thread Theorem</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="couture" style="--row:2">
+            <img src="/assets/portfolio/look-20.webp" alt="Couture look" loading="lazy" />
+            <figcaption><em>Couture · 07</em><span>Monument In Silk</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="evening" style="--row:3">
+            <img src="/assets/portfolio/look-21.webp" alt="Evening wear study" loading="lazy" />
+            <figcaption><em>Evening · 08</em><span>Midnight Vow</span></figcaption>
+          </figure>
+          <figure class="project" data-cursor-hover="View" data-filter-tag="fabric" style="--row:2">
+            <img src="/assets/portfolio/look-22.webp" alt="Fabric collage" loading="lazy" />
+            <figcaption><em>Fabric · 09</em><span>Lichen Geometry</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 06 STYLING ============ -->
+      <section class="styling" id="styling" data-section="styling" data-theme="dark">
+        <div class="about__chapter">
+          <span class="chapter__index">/ 06</span>
+          <span class="chapter__label">Styling &amp; Model Management</span>
+        </div>
+        <h2 class="styling__heading" data-split-chars>
+          On set: photoshoots, fashion shows, art direction.
+        </h2>
+        <p class="styling__caption" data-split-lines>
+          Drag, scroll or swipe — a continuous reel of editorial work.
+        </p>
+
+        <div class="styling__rail" data-styling-rail>
+          <div class="styling__track" data-styling-track>
+            <figure class="styling__card" data-cursor-hover="Shoot">
+              <img src="/assets/portfolio/look-23.webp" alt="Editorial shoot" loading="lazy" />
+              <figcaption><em>01 — Editorial</em><span>Softshell, Issue 04</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Show">
+              <img src="/assets/portfolio/look-24.webp" alt="Runway styling" loading="lazy" />
+              <figcaption><em>02 — Runway</em><span>JFW · Backstage</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Direction">
+              <img src="/assets/portfolio/look-25.webp" alt="Art direction" loading="lazy" />
+              <figcaption><em>03 — Art Direction</em><span>Velvet Archives</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Shoot">
+              <img src="/assets/portfolio/look-26.webp" alt="Campaign imagery" loading="lazy" />
+              <figcaption><em>04 — Campaign</em><span>Roses of Regality</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Casting">
+              <img src="/assets/portfolio/look-27.webp" alt="Casting polaroid" loading="lazy" />
+              <figcaption><em>05 — Casting</em><span>Jakarta, 2024</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Story">
+              <img src="/assets/portfolio/look-28.webp" alt="Story imagery" loading="lazy" />
+              <figcaption><em>06 — Story</em><span>The Hour Between</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Show">
+              <img src="/assets/portfolio/look-29.webp" alt="Runway moment" loading="lazy" />
+              <figcaption><em>07 — Runway</em><span>Alluring Shanghai</span></figcaption>
+            </figure>
+            <figure class="styling__card" data-cursor-hover="Shoot">
+              <img src="/assets/portfolio/look-30.webp" alt="Location shoot" loading="lazy" />
+              <figcaption><em>08 — On Location</em><span>Kota Tua</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 07 COLLECTIONS ============ -->
+      <section class="collections" id="collections" data-section="collections">
+        <div class="about__chapter">
+          <span class="chapter__index">/ 07</span>
+          <span class="chapter__label">Design Collections</span>
+        </div>
+
+        <article class="collection" data-collection data-theme="trauma" style="--c: #2b5d3b; --c-accent: #e54b4b;">
+          <div class="collection__meta">
+            <span class="collection__index">Chapter 01</span>
+            <h3 class="collection__name" data-split-chars>Trauma</h3>
+            <span class="collection__tag">Biophilic · Organic</span>
+            <p>
+              Soft armour built from organic shapes — the collection listens to the body and lets
+              it breathe, then shelters it in hand-finished form.
+            </p>
+            <ul class="collection__notes">
+              <li><i class="ri-plant-line"></i>Biophilic silhouettes</li>
+              <li><i class="ri-shape-line"></i>Organic curvatures</li>
+              <li><i class="ri-seedling-line"></i>Natural dyes</li>
+            </ul>
+          </div>
+          <div class="collection__media">
+            <figure data-parallax-img><img src="/assets/editorial/edit-01.webp" alt="Trauma editorial" loading="lazy" /></figure>
+            <figure data-parallax-img><img src="/assets/portfolio/look-03.webp" alt="Trauma look" loading="lazy" /></figure>
+          </div>
+        </article>
+
+        <article class="collection collection--alt" data-collection data-theme="megamendung" style="--c: #1a3359; --c-accent: #ffa987;">
+          <div class="collection__media">
+            <figure data-parallax-img><img src="/assets/editorial/edit-03.webp" alt="Megamendung editorial" loading="lazy" /></figure>
+            <figure data-parallax-img><img src="/assets/portfolio/look-04.webp" alt="Megamendung look" loading="lazy" /></figure>
+          </div>
+          <div class="collection__meta">
+            <span class="collection__index">Chapter 02</span>
+            <h3 class="collection__name" data-split-chars>Megamendung Ancestral</h3>
+            <span class="collection__tag">Cultural · Oriental</span>
+            <p>
+              A dialogue with Cirebonese heritage — cloud motifs migrate from batik to couture,
+              layered like a family story retold in silk.
+            </p>
+            <ul class="collection__notes">
+              <li><i class="ri-cloud-line"></i>Megamendung motifs</li>
+              <li><i class="ri-vip-crown-2-line"></i>Ancestral silhouettes</li>
+              <li><i class="ri-brush-4-line"></i>Hand-painted detailing</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="collection" data-collection data-theme="roses" style="--c: #7a1f2b; --c-accent: #f7ebe8;">
+          <div class="collection__meta">
+            <span class="collection__index">Chapter 03</span>
+            <h3 class="collection__name" data-split-chars>Roses of Regality</h3>
+            <span class="collection__tag">Luxury · Modern Classic</span>
+            <p>
+              A modern classic with a monarch's posture — rose-structured bodices and refined
+              tailoring for women who wear intent as fragrance.
+            </p>
+            <ul class="collection__notes">
+              <li><i class="ri-rose-line"></i>Petal structures</li>
+              <li><i class="ri-sparkling-line"></i>Modern classic</li>
+              <li><i class="ri-heart-3-line"></i>Couture tailoring</li>
+            </ul>
+          </div>
+          <div class="collection__media">
+            <figure data-parallax-img><img src="/assets/portfolio/look-06.webp" alt="Roses of Regality look" loading="lazy" /></figure>
+            <figure data-parallax-img><img src="/assets/editorial/edit-06.webp" alt="Roses editorial" loading="lazy" /></figure>
+          </div>
+        </article>
+
+        <article class="collection collection--alt" data-collection data-theme="shanghai" style="--c: #3a1212; --c-accent: #e54b4b;">
+          <div class="collection__media">
+            <figure data-parallax-img><img src="/assets/editorial/edit-04.webp" alt="Alluring Shanghai editorial" loading="lazy" /></figure>
+            <figure data-parallax-img><img src="/assets/portfolio/look-08.webp" alt="Alluring Shanghai look" loading="lazy" /></figure>
+          </div>
+          <div class="collection__meta">
+            <span class="collection__index">Chapter 04</span>
+            <h3 class="collection__name" data-split-chars>Alluring Shanghai</h3>
+            <span class="collection__tag">Dramatic · Oriental</span>
+            <p>
+              A cinematic oriental pulse — qipao lineage rebuilt with dramatic slits, velvet
+              hand and a smoke-lacquered red.
+            </p>
+            <ul class="collection__notes">
+              <li><i class="ri-star-half-s-line"></i>Dramatic silhouettes</li>
+              <li><i class="ri-feather-line"></i>Velvet &amp; silk</li>
+              <li><i class="ri-flashlight-line"></i>Nocturnal palette</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============ 08 TEXTILE ============ -->
+      <section class="textile" id="textile" data-section="textile" data-theme="light">
+        <div class="about__chapter about__chapter--dark">
+          <span class="chapter__index">/ 08</span>
+          <span class="chapter__label">Textile &amp; Material</span>
+        </div>
+        <h2 class="textile__heading" data-split-chars>
+          The texture is the thesis.
+        </h2>
+        <p class="textile__caption" data-split-lines>
+          A close reading of macramé, embroidery and surface design — where the hand becomes the
+          instrument of narrative.
+        </p>
+
+        <div class="textile__grid">
+          <figure class="textile__tile" data-cursor-hover="Detail">
+            <img src="/assets/textile/tex-01.webp" alt="Macramé detail" loading="lazy" />
+            <figcaption><em>Macramé</em><span>Knot-as-drawing study</span></figcaption>
+          </figure>
+          <figure class="textile__tile" data-cursor-hover="Detail">
+            <img src="/assets/textile/tex-02.webp" alt="Embroidery detail" loading="lazy" />
+            <figcaption><em>Embroidery</em><span>Thread relief on silk</span></figcaption>
+          </figure>
+          <figure class="textile__tile" data-cursor-hover="Detail">
+            <img src="/assets/textile/tex-03.webp" alt="Surface study" loading="lazy" />
+            <figcaption><em>Surface</em><span>Sculpted bouclé</span></figcaption>
+          </figure>
+          <figure class="textile__tile" data-cursor-hover="Detail">
+            <img src="/assets/textile/tex-04.webp" alt="Textile swatch" loading="lazy" />
+            <figcaption><em>Swatch</em><span>Resist-dyed linen</span></figcaption>
+          </figure>
+          <figure class="textile__tile" data-cursor-hover="Detail">
+            <img src="/assets/textile/tex-05.webp" alt="Textile macro" loading="lazy" />
+            <figcaption><em>Macro</em><span>Fibre cartography</span></figcaption>
+          </figure>
+          <figure class="textile__tile" data-cursor-hover="Detail">
+            <img src="/assets/textile/tex-06.webp" alt="Appliqué study" loading="lazy" />
+            <figcaption><em>Appliqué</em><span>Petal relief on tulle</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 09 ILLUSTRATION ============ -->
+      <section class="illustration" id="illustration" data-section="illustration" data-theme="light">
+        <div class="about__chapter about__chapter--dark">
+          <span class="chapter__index">/ 09</span>
+          <span class="chapter__label">Digital Illustration</span>
+        </div>
+
+        <div class="illustration__grid">
+          <div class="illustration__intro">
+            <h2 class="illustration__heading" data-split-chars>Sketches. Concept. Line.</h2>
+            <p data-split-lines>
+              Before a fabric touches the mannequin, a line touches the paper. A curated selection
+              of concept sketches, croquis and digital illustrations.
+            </p>
+            <svg
+              class="illustration__signature"
+              viewBox="0 0 420 80"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-signature
+            >
+              <path
+                d="M10 54 C 60 10, 110 10, 150 50 S 230 80, 270 40 S 350 10, 410 56"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <figure class="illustration__plate illustration__plate--1" data-cursor-hover="Sketch">
+            <img src="/assets/sketches/sk-01.webp" alt="Fashion sketch" loading="lazy" />
+          </figure>
+          <figure class="illustration__plate illustration__plate--2" data-cursor-hover="Sketch">
+            <img src="/assets/sketches/sk-02.webp" alt="Fashion sketch" loading="lazy" />
+          </figure>
+          <figure class="illustration__plate illustration__plate--3" data-cursor-hover="Sketch">
+            <img src="/assets/sketches/sk-03.webp" alt="Fashion sketch" loading="lazy" />
+          </figure>
+          <figure class="illustration__plate illustration__plate--4" data-cursor-hover="Sketch">
+            <img src="/assets/sketches/sk-04.webp" alt="Fashion sketch" loading="lazy" />
+          </figure>
+          <figure class="illustration__plate illustration__plate--5" data-cursor-hover="Sketch">
+            <img src="/assets/sketches/sk-05.webp" alt="Fashion sketch" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 10 CONTACT ============ -->
+      <section class="contact" id="contact" data-section="contact" data-theme="shadow">
+        <div class="about__chapter">
+          <span class="chapter__index">/ 10</span>
+          <span class="chapter__label">Let's Talk</span>
+        </div>
+        <h2 class="contact__title" data-contact-title>
+          <span>Let's</span>
+          <span>build</span>
+          <span>something</span>
+          <span class="contact__title-accent">beautiful.</span>
+        </h2>
+        <p class="contact__lede" data-split-lines>
+          For commissions, editorials, collaborations and press — reach the atelier directly.
+        </p>
+
+        <div class="contact__grid">
+          <a class="contact__card" href="mailto:hello@taflimadine.com" data-magnetic data-cursor-hover="Write">
+            <span class="contact__card-label"><i class="ri-mail-line"></i>Email</span>
+            <span class="contact__card-value">hello@taflimadine.com</span>
+            <i class="ri-arrow-right-up-line contact__card-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="contact__card" href="https://instagram.com/taflimadine" target="_blank" rel="noopener" data-magnetic data-cursor-hover="Follow">
+            <span class="contact__card-label"><i class="ri-instagram-line"></i>Instagram</span>
+            <span class="contact__card-value">@taflimadine</span>
+            <i class="ri-arrow-right-up-line contact__card-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="contact__card" href="tel:+6281234567890" data-magnetic data-cursor-hover="Call">
+            <span class="contact__card-label"><i class="ri-phone-line"></i>Phone</span>
+            <span class="contact__card-value">+62 812 345 67890</span>
+            <i class="ri-arrow-right-up-line contact__card-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <footer class="contact__foot">
+          <span>© 2025 Tafli Madine — Atelier</span>
+          <span>Jakarta · Paris · On Request</span>
+          <a href="#hero" class="contact__top" data-magnetic data-cursor-hover="Top">
+            Back to top <i class="ri-arrow-up-line" aria-hidden="true"></i>
+          </a>
+        </footer>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

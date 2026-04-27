@@ -1,0 +1,102 @@
+@use "variables" as *;
+
+.styling {
+  padding: clamp(6rem, 12vw, 10rem) 0;
+  background: $c-shadow-deep;
+  color: $c-seashell;
+  overflow: hidden;
+
+  .about__chapter,
+  &__heading,
+  &__caption {
+    max-width: $max-w;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 clamp(1.5rem, 3vw, 3rem);
+  }
+
+  &__heading {
+    font-family: $font-serif;
+    font-size: clamp(2.4rem, 5vw, 5rem);
+    line-height: 1;
+    max-width: 22ch;
+    margin-top: 1rem;
+  }
+
+  &__caption {
+    font-family: $font-serif;
+    font-style: italic;
+    color: rgba($c-seashell, 0.72);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    max-width: 38rem;
+  }
+
+  &__rail {
+    width: 100%;
+    position: relative;
+    padding-bottom: 2rem;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 clamp(1.5rem, 3vw, 3rem);
+    width: max-content;
+    will-change: transform;
+  }
+
+  &__card {
+    position: relative;
+    flex: 0 0 auto;
+    width: clamp(16rem, 28vw, 24rem);
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+      transition: transform 1.2s $ease-out;
+    }
+
+    figcaption {
+      position: absolute;
+      inset: auto 1rem 1rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-family: $font-sans;
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: $c-seashell;
+
+      em {
+        font-style: italic;
+        font-family: $font-serif;
+        font-size: 0.95rem;
+        text-transform: none;
+        letter-spacing: 0;
+        color: $c-tangerine;
+      }
+    }
+
+    &:nth-child(odd) {
+      transform: translateY(1rem);
+    }
+    &:nth-child(even) {
+      transform: translateY(-1rem);
+    }
+
+    &:hover img {
+      transform: scale(1.12);
+    }
+  }
+}

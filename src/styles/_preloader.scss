@@ -1,0 +1,61 @@
+@use "variables" as *;
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: $z-preloader;
+  background: $c-shadow-deep;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem clamp(1.5rem, 4vw, 3rem);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba($c-strawberry, 0.22), transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba($c-tangerine, 0.18), transparent 65%);
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: end;
+  }
+
+  &__label {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+    color: $c-seashell;
+    opacity: 0.9;
+  }
+
+  &__counter {
+    font-family: $font-serif;
+    font-size: clamp(3rem, 12vw, 9rem);
+    line-height: 1;
+    color: $c-seashell;
+    letter-spacing: -0.04em;
+  }
+
+  &__bar {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: rgba($c-seashell, 0.15);
+    overflow: hidden;
+
+    span {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, $c-strawberry, $c-tangerine);
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+    }
+  }
+}

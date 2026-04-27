@@ -1,0 +1,160 @@
+@use "variables" as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem clamp(1.25rem, 3vw, 2.5rem);
+  mix-blend-mode: difference;
+  color: $c-seashell;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  &__brand-mark {
+    font-family: $font-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgba($c-seashell, 0.5);
+    border-radius: 4px;
+  }
+
+  &__brand-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+
+    span {
+      font-family: $font-serif;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+    em {
+      font-style: normal;
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.75rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+
+    a {
+      position: relative;
+      padding: 0.25rem 0;
+      transition: opacity 0.4s ease;
+      opacity: 0.85;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 1px;
+        width: 100%;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.6s $ease-out;
+      }
+
+      &:hover {
+        opacity: 1;
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba($c-seashell, 0.45);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  @include md {
+    &__links {
+      display: none;
+    }
+    &__toggle {
+      display: inline-flex;
+    }
+    &__brand-meta em {
+      display: none;
+    }
+  }
+}
+
+// Mobile drawer
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: $z-drawer;
+  background: $c-shadow-deep;
+  padding: 5rem 2rem 3rem;
+  transform: translateY(-100%);
+  transition: transform 0.8s $ease-swift;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &.is-open {
+    transform: translateY(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $c-line;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-family: $font-serif;
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    color: $c-seashell;
+
+    a {
+      opacity: 0.78;
+      transition: opacity 0.4s, transform 0.4s $ease-out, color 0.4s;
+
+      &:hover {
+        opacity: 1;
+        color: $c-strawberry;
+        transform: translateX(10px);
+      }
+    }
+  }
+}
