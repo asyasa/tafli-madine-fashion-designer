@@ -1,0 +1,171 @@
+@use "variables" as *;
+
+.contact {
+  position: relative;
+  background: $c-shadow-deep;
+  color: $c-seashell;
+  padding: clamp(6rem, 12vw, 10rem) clamp(1.5rem, 3vw, 3rem) 2rem;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        60% 60% at 15% 10%,
+        rgba($c-strawberry, 0.22),
+        transparent 60%
+      ),
+      radial-gradient(
+        60% 60% at 85% 85%,
+        rgba($c-tangerine, 0.18),
+        transparent 60%
+      );
+    pointer-events: none;
+  }
+
+  > .about__chapter {
+    position: relative;
+    z-index: 1;
+    max-width: max-content;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-family: $font-serif;
+    font-size: clamp(3rem, 10vw, 10rem);
+    line-height: 0.94;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    margin-top: 0.5rem;
+
+    span {
+      display: inline-block;
+      overflow: hidden;
+      padding: 0.1em 0;
+    }
+
+    &-accent {
+      font-style: italic;
+      color: $c-strawberry;
+    }
+  }
+
+  &__lede {
+    position: relative;
+    z-index: 1;
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    color: rgba($c-seashell, 0.78);
+    margin: 2rem 0 3rem;
+    max-width: 42rem;
+  }
+
+  &__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 56rem;
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding: 1.8rem 1.5rem 1.5rem;
+    border: 1px solid $c-line;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba($c-seashell, 0.03);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    transition: border-color 0.5s ease, background 0.5s ease, transform 0.8s $ease-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, $c-strawberry, $c-tangerine);
+      transform: translateY(100%);
+      transition: transform 0.7s $ease-swift;
+      z-index: -1;
+    }
+
+    &-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba($c-seashell, 0.65);
+    }
+
+    &-value {
+      font-family: $font-serif;
+      font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.4rem;
+      color: $c-tangerine;
+      transition: transform 0.5s $ease-out;
+    }
+
+    &:hover {
+      border-color: transparent;
+
+      &::before {
+        transform: translateY(0);
+      }
+      .contact__card-label,
+      .contact__card-arrow,
+      .contact__card-value {
+        color: $c-shadow;
+      }
+      .contact__card-arrow {
+        transform: translate(4px, -4px);
+      }
+    }
+  }
+
+  &__foot {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid $c-line;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba($c-seashell, 0.55);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $c-tangerine;
+    transition: letter-spacing 0.5s ease;
+    &:hover {
+      letter-spacing: 0.32em;
+    }
+  }
+}

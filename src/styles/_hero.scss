@@ -1,0 +1,242 @@
+@use "variables" as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(6rem, 14vh, 9rem) clamp(1.5rem, 3vw, 3rem) 3rem;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  color: $c-seashell;
+  isolation: isolate;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+          120% 90% at 60% 50%,
+          transparent 40%,
+          rgba($c-shadow, 0.75) 85%
+        ),
+        linear-gradient(180deg, rgba($c-shadow, 0.4) 0%, rgba($c-shadow-deep, 0.9) 95%);
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9) contrast(1.05) brightness(0.72);
+    transform: scale(1.08);
+    will-change: transform;
+  }
+
+  &__veil {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      60% 60% at 15% 90%,
+      rgba($c-strawberry, 0.38),
+      transparent 70%
+    );
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  &__grid {
+    position: relative;
+    width: 100%;
+    max-width: $max-w;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  &__eyebrow {
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: $c-tangerine;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    width: max-content;
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(4rem, 17vw, 16rem);
+    line-height: 0.86;
+    letter-spacing: -0.03em;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(-2rem, -3vw, -1rem);
+    margin-top: 0.5rem;
+
+    &-line {
+      display: block;
+      overflow: hidden;
+      padding: 0.1em 0;
+      &--accent {
+        font-style: italic;
+        color: $c-tangerine;
+        align-self: flex-end;
+        margin-right: clamp(0rem, 4vw, 5rem);
+      }
+    }
+  }
+
+  &__role {
+    font-family: $font-sans;
+    font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba($c-seashell, 0.88);
+    margin-top: 0.75rem;
+  }
+
+  &__sub {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    max-width: 42rem;
+    color: rgba($c-seashell, 0.82);
+    margin-top: 0.5rem;
+    line-height: 1.35;
+  }
+
+  &__meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    border-top: 1px solid $c-line;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    max-width: 44rem;
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 0.68rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba($c-seashell, 0.5);
+      }
+      em {
+        font-family: $font-serif;
+        font-style: normal;
+        font-size: 1rem;
+        color: $c-seashell;
+        margin-top: 0.25rem;
+      }
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+
+  &__cta {
+    margin-top: 2.5rem;
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid rgba($c-seashell, 0.5);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    background: rgba($c-shadow, 0.35);
+    backdrop-filter: blur(6px);
+    transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+
+    i {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: $c-strawberry;
+      color: $c-seashell;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: transform 0.4s $ease-out;
+    }
+
+    &:hover {
+      background: $c-seashell;
+      color: $c-shadow;
+      border-color: $c-seashell;
+      i {
+        transform: translateY(4px);
+      }
+    }
+  }
+
+  &__ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-top: 1px solid $c-line;
+    background: rgba($c-shadow-deep, 0.55);
+    backdrop-filter: blur(8px);
+
+    &-track {
+      display: flex;
+      gap: 2rem;
+      white-space: nowrap;
+      font-family: $font-serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: rgba($c-seashell, 0.65);
+      padding-left: 2rem;
+      will-change: transform;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    right: clamp(1.5rem, 3vw, 3rem);
+    bottom: 6rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba($c-seashell, 0.72);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    span {
+      display: block;
+      width: 1px;
+      height: 36px;
+      background: $c-tangerine;
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+}

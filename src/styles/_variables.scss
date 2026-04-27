@@ -1,0 +1,59 @@
+// =========================
+// DESIGN TOKENS
+// =========================
+
+// Brand palette — STRICT
+$c-strawberry: #e54b4b;
+$c-tangerine: #ffa987;
+$c-seashell: #f7ebe8;
+$c-graphite: #444140;
+$c-shadow: #1e1e24;
+
+// Derived tints
+$c-shadow-deep: #141418;
+$c-shadow-soft: #2b2b33;
+$c-seashell-warm: #efe1dc;
+$c-line: rgba($c-seashell, 0.14);
+$c-line-strong: rgba($c-seashell, 0.24);
+$c-line-dark: rgba($c-shadow, 0.14);
+
+// Typography
+$font-serif: "Cormorant Garamond", "Didot", "Playfair Display", Georgia, serif;
+$font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+// Scale
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+$ease-swift: cubic-bezier(0.83, 0, 0.17, 1);
+
+// Container
+$max-w: 1680px;
+$gutter: clamp(1.25rem, 3vw, 3rem);
+
+// Breakpoints
+$bp-lg: 1180px;
+$bp-md: 900px;
+$bp-sm: 640px;
+
+@mixin lg {
+  @media (max-width: $bp-lg) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: $bp-md) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: $bp-sm) {
+    @content;
+  }
+}
+
+// z-index stack
+$z-progress: 50;
+$z-nav: 60;
+$z-drawer: 70;
+$z-preloader: 90;
+$z-cursor: 100;

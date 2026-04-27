@@ -1,0 +1,157 @@
+@use "variables" as *;
+
+.experience {
+  position: relative;
+  padding: clamp(6rem, 12vw, 10rem) 0 0;
+  background: $c-shadow-deep;
+  overflow: hidden;
+  color: $c-seashell;
+
+  &__intro {
+    max-width: $max-w;
+    margin: 0 auto 3rem;
+    padding: 0 clamp(1.5rem, 3vw, 3rem);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+
+    .about__chapter {
+      grid-column: 1 / span 3;
+    }
+
+    @include md {
+      .about__chapter,
+      .experience__heading,
+      .experience__caption,
+      .experience__hint {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__heading {
+    grid-column: 4 / span 7;
+    font-family: $font-serif;
+    font-size: clamp(2rem, 4.4vw, 4rem);
+    line-height: 1;
+    align-self: end;
+  }
+
+  &__caption {
+    grid-column: 4 / span 6;
+    font-family: $font-serif;
+    font-style: italic;
+    color: rgba($c-seashell, 0.7);
+    margin-top: 1rem;
+    max-width: 40rem;
+  }
+
+  &__hint {
+    grid-column: 10 / -1;
+    justify-self: end;
+    align-self: end;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba($c-seashell, 0.55);
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__track {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 4rem 0 6rem;
+  }
+
+  &__line {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($c-seashell, 0.25) 10%,
+      rgba($c-tangerine, 0.6) 50%,
+      rgba($c-seashell, 0.25) 90%,
+      transparent
+    );
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    padding: 0 clamp(1.5rem, 3vw, 3rem);
+    width: max-content;
+    position: relative;
+  }
+}
+
+.exp-card {
+  position: relative;
+  width: min(32rem, 70vw);
+  min-width: 22rem;
+  padding: 2rem 2rem 2.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba($c-seashell, 0.04),
+    rgba($c-seashell, 0.015)
+  );
+  border: 1px solid $c-line;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  color: $c-seashell;
+  flex: 0 0 auto;
+  transition: transform 0.7s $ease-out, border-color 0.5s ease, background 0.5s ease;
+
+  &__year {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: $c-tangerine;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: $font-serif;
+    font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+    color: $c-seashell;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: rgba($c-seashell, 0.72);
+    max-width: 40ch;
+  }
+
+  &__mark {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-size: 1.3rem;
+    color: $c-strawberry;
+    opacity: 0.85;
+  }
+
+  &:nth-child(odd) {
+    transform: translateY(-2rem);
+  }
+  &:nth-child(even) {
+    transform: translateY(2rem);
+  }
+
+  &:hover {
+    border-color: $c-strawberry;
+    background: linear-gradient(
+      180deg,
+      rgba($c-strawberry, 0.06),
+      rgba($c-shadow, 0.02)
+    );
+  }
+}
